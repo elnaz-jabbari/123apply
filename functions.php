@@ -162,8 +162,8 @@ add_action( 'wp_enqueue_scripts', 'apply_scripts' );
 
 
 
-/*require get_template_directory() . '/inc/cmb2/init.php';
-require get_template_directory() . '/inc/cmb2/example-functions.php';*/
+/*require_once get_template_directory() . '/inc/cmb2/init.php';
+require_once ('/inc/cmb2/example-functions.php');*/
 
 /**
  * Implement the Custom Header feature.

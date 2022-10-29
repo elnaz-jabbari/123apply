@@ -614,8 +614,16 @@ body{
 
 */
 
+/*mobile menu test*/
 
+.nav-list {
 
+    background-color: red;
+    padding: 45px !important;
+    width: 280px;
+}
+
+/*mobile menu test*/
 
 /*mega menu test*/
 
@@ -666,7 +674,7 @@ body{
 .menu-menu-1-container>ul>li>ul {
 
     position: absolute;
-    top: 153px;
+    top: 118px;
     right: 308px;
     width: max-content;
     padding: 20px;
