@@ -26,7 +26,7 @@
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'apply' ); ?></a>
 
-    <!--<div class="mobile-header mb-5 d-md-none">
+    <div class="mobile-header mb-5 d-md-none">
         <nav class="nav-bar">
             <div class="toggle-menu">
                 <div class="line line1"></div>
@@ -35,7 +35,7 @@
             </div>
             <div class="nav-list p-0 m-0">
                 <div class="d-flex align-items-center justify-content-center">
-                    <?php /*echo the_custom_logo();*/?>
+                    <?php echo the_custom_logo();?>
                 </div>
                 <div class="mobile-search position-relative">
                     <input class="input-search w-100" type="text">
@@ -45,17 +45,17 @@
                 </div>
                 <div>
                     <?php
-/*                    wp_nav_menu(
+                    wp_nav_menu(
                         array(
                             'theme_location' => 'menu-1',
                             'menu_id'        => 'mainmenu',
                         )
                     );
-                    */?>
+                    ?>
                 </div>
             </div>
         </nav>
-    </div>-->
+    </div>
 
     <!--<nav role='navigation'>
         <div id="menuToggle">
