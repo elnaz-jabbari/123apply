@@ -664,9 +664,10 @@ body{
 }
 
 .menu-menu-1-container>ul>li>ul {
+
     position: absolute;
     top: 153px;
-    right: 215px;
+    right: 308px;
     width: max-content;
     padding: 20px;
     display: flex;
@@ -676,11 +677,7 @@ body{
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    transition: .4s;
-    -webkit-transition: .4s;
-    -moz-transition: .4s;
-    -ms-transition: .4s;
-    -o-transition: .4s;
+    transition: 1s;
 }
 
 .menu-menu-1-container>ul>li>ul>li {
