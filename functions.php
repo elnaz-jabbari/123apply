@@ -160,6 +160,11 @@ function apply_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'apply_scripts' );
 
+
+
+/*require get_template_directory() . '/inc/cmb2/init.php';
+require get_template_directory() . '/inc/cmb2/example-functions.php';*/
+
 /**
  * Implement the Custom Header feature.
  */
@@ -186,6 +191,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
     require get_template_directory() . '/inc/jetpack.php';
 }
+
+
 
 
 /*start lawyers post type*/
@@ -326,7 +333,7 @@ add_action( 'init', 'custom_post_type1', 0 );
 /*end education post type*/
 
 
-
+/*footer widgets*/
 function apply_footer_Widgets() {
     register_sidebar( array(
         'name'          => __( 'عنوان ابزارک فوتر یک' ),
@@ -457,6 +464,7 @@ function apply_footer_Widgets() {
 }
 add_action( 'widgets_init', 'apply_footer_Widgets' );
 
+/*footer widgets*/
 
 
 

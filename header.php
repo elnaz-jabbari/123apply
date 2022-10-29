@@ -57,28 +57,17 @@
         </nav>
     </div>-->
 
-    <nav role='navigation'>
+    <!--<nav role='navigation'>
         <div id="menuToggle">
-            <!--
-            A fake / hidden checkbox is used as click reciever,
-            so you can use the :checked selector on it.
-            -->
+
             <input type="checkbox" />
 
-            <!--
-            Some spans to act as a hamburger.
 
-            They are acting like a real hamburger,
-            not that McDonalds stuff.
-            -->
             <span></span>
             <span></span>
             <span></span>
 
-            <!--
-            Too bad the menu has to be inside of the button
-            but hey, it's pure CSS magic.
-            -->
+
             <ul id="menu">
                 <a href="#"><li>Home</li></a>
                 <a href="#"><li>About</li></a>
@@ -87,7 +76,7 @@
                 <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
             </ul>
         </div>
-    </nav>
+    </nav>-->
 
     <header id="masthead" class="site-header p-2">
         <!--	<div class="site-branding">
@@ -141,7 +130,7 @@
                         </div>
 
                     </div>
-                    <div class="col-md-6 d-none d-md-block">
+                    <div class="col-md-7 d-none d-md-block">
                         <nav id="site-navigation" class="main-navigation">
                             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'apply' ); ?></button>
                             <?php
@@ -154,7 +143,7 @@
                             ?>
                         </nav><!-- #site-navigation -->
                     </div>
-                    <div class="col-md-4 col-9 p-0">
+                    <div class="col-md-3 col-9 p-0">
                         <div class="d-flex align-items-center justify-content-center">
                             <div class="evaluation-btn">
                                 <?php $link_url2 =get_field('link_button_1');?>
