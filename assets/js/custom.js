@@ -123,14 +123,7 @@ jQuery(function ($) {
 
     );
 
-    $(document).ready(function () {
 
-        $('.menu-item-has-children').click(function(){
-            var value = $(this).html();
-            $('.menu-menu-1-container ul li ul').css('display',"block !important");
-        })
-
-    });
 
 
     function myFunction() {
@@ -138,14 +131,25 @@ jQuery(function ($) {
         element.classList.add("dropdown-list");
     }
 
+    var menustatus=0
+    $('.menu-item-has-children').click(function(event){
+        if(screen.availWidth<1024){
+            /*tag a not work*/
+            event.preventDefault()
+            if(menustatus ==0){
+                $(this).children('ul').css('display',"block");
+                menustatus++
+            }else{
+                $(this).children('ul').css('display',"none");
+                menustatus--
+            }
+        }
+
+    })
+
 
 
 });
 
-const toggleButton = document.querySelector('.toggle-menu');
-const navBar = document.querySelector('.nav-bar');
-toggleButton.addEventListener('click', () => {
-    navBar.classList.toggle('toggle');
-});
 
 
