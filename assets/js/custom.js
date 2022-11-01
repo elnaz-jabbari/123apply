@@ -126,6 +126,8 @@ jQuery(function ($) {
 
 
 
+
+
     function myFunction() {
         var element = document.getElementsByClassName("menu-item-has-children");
         element.classList.add("dropdown-list");
@@ -145,7 +147,28 @@ jQuery(function ($) {
             }
         }
 
-    })
+    });
+
+    $(document).ready (
+
+        $('.toggle-menu').click(function (){
+
+            $('.mobile-background').css('display',"block");
+            $('.mobile-background').css('z-index',"999");
+
+            }
+        )
+    );
+
+    $(document).ready (
+
+        $('.mobile-background').click(function (){
+
+                $('.nav-list').css('right',"-280px");
+                $(this).css('display',"none");
+            }
+        )
+    );
 
 
 

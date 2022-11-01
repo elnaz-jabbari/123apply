@@ -94,7 +94,9 @@
 		</div>--><!-- .site-branding -->
 
 
+<div class="mobile-background">
 
+</div>
 
         <div class="mobile-header">
             <div class="container">

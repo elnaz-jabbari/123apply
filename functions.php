@@ -471,3 +471,105 @@ add_action( 'widgets_init', 'apply_footer_Widgets' );
 
 /*require_once get_template_directory("/inc/cmb2/init.php");
 require_once ("inc/cmb2/example-functions.php");*/
+
+
+
+
+
+
+
+
+add_action( 'cmb2_admin_init', 'yourprefix_register_about_page_metabox' );
+/**
+ * Hook in and add a metabox that only appears on the 'About' page
+ */
+function yourprefix_register_about_page_metabox() {
+
+	/**
+	 * Metabox to be displayed on a single page ID
+	 */
+	$cmb_about_page = new_cmb2_box( array(
+		'id'           => 'yourprefix_about_metabox',
+		'title'        => esc_html__( 'تست تستی', 'cmb2' ),
+		'object_types' => array( 'page' ), // Post type
+		'context'      => 'normal',
+		'priority'     => 'high',
+		'show_names'   => true, // Show field names on the left
+		'show_on'      => array(
+			'id' => array( 2 ),
+		), // Specific post IDs to display this metabox
+	) );
+
+	$cmb_about_page->add_field( array(
+		'name' => esc_html__( 'Test Text', 'cmb2' ),
+		'desc' => esc_html__( 'field description (optional)', 'cmb2' ),
+		'id'   => 'yourprefix_about_text',
+		'type' => 'text',
+	) );
+
+}
+
+
+add_action( 'cmb2_admin_init', 'yourprefix_register_repeatable_group_field_metabox' );
+/**
+ * Hook in and add a metabox to demonstrate repeatable grouped fields
+ */
+function yourprefix_register_repeatable_group_field_metabox() {
+
+	/**
+	 * Repeatable Field Groups
+	 */
+	$cmb_group = new_cmb2_box( array(
+		'id'           => 'yourprefix_group_metabox',
+		'title'        => esc_html__( 'افزودن فیلد های هدر سایت', 'cmb2' ),
+		'object_types' => array( 'page' ),
+	) );
+
+	// $group_field_id is the field id string, so in this case: 'yourprefix_group_demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => 'yourprefix_group_demo',
+		'type'        => 'group',
+		'description' => esc_html__( 'Generates reusable form entries', 'cmb2' ),
+		'options'     => array(
+			'group_title'    => esc_html__( 'Entry {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'     => esc_html__( 'Add Another Entry', 'cmb2' ),
+			'remove_button'  => esc_html__( 'Remove Entry', 'cmb2' ),
+			'sortable'       => true,
+			// 'closed'      => true, // true to have the groups closed by default
+			// 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'cmb2' ), // Performs confirmation before removing group.
+		),
+	) );
+
+	/**
+	 * Group fields works the same, except ids only need
+	 * to be unique to the group. Prefix is not needed.
+	 *
+	 * The parent field's id needs to be passed as the first argument.
+	 */
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name'       => esc_html__( 'عنوان دکمه', 'cmb2' ),
+		'id'         => 'youre_title',
+		'type'       => 'text',
+		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name'    => __( 'ویرایشگر متن', 'cmb2' ),
+		'id'      => 'content',
+		'type'    => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 8, ),
+	) );
+
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => esc_html__( 'Entry Image', 'cmb2' ),
+		'id'   => 'image',
+		'type' => 'file',
+	) );
+
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => esc_html__( 'Image Caption', 'cmb2' ),
+		'id'   => 'image_caption',
+		'type' => 'text',
+	) );
+
+}

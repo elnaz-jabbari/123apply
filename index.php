@@ -63,7 +63,21 @@ get_header();
     <div class="container mt-5">
         <div class="row">
             <section>
-                <h3 class="text-center text-black apply-text boder-bottom">۱،۲،۳ اپلای کن</h3>
+                <h3 class="text-center text-black apply-text boder-bottom">
+
+<?php while ( have_posts() ) : the_post(); ?>
+
+	<?php get_template_part( 'content', 'page' ); ?>
+                    <?php
+                    $text  = get_post_meta( get_the_ID(), 'youre_title', true );
+                    echo esc_html( $text );
+                    ?>
+
+	<?php comments_template( '', true ); ?>
+
+<?php endwhile; // end of the loop. ?>
+
+                </h3>
                 <div class=" d-flex align-items-center justify-content-center">
 					<span class="underline">
 

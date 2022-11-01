@@ -898,6 +898,17 @@ body{
 
 @media screen and (max-width: 700px){
 
+    .mobile-background {
+        background: rgba(12, 31, 82, 0.94);
+        width: 100%;
+        min-height: 100% !important;
+        height: 100%;
+        content: "";
+        position: absolute;
+        display: none;
+
+    }
+
     .menu-menu-1-container ul li {
         margin: 20px 5px !important;
     }
