@@ -111,6 +111,8 @@ jQuery(function ($) {
         $('.toggle-menu').click(function(){
             var value = $(this).html();
             $('.nav-list').css('right',"0");
+            $('.mobile-background').css('display',"block");
+            $('.mobile-background').css('z-index',"999");
         })
 
     );
@@ -119,8 +121,8 @@ jQuery(function ($) {
         $('.close-button').click(function(){
             var value = $(this).html();
             $('.nav-list').css('right',"-280px");
+            $('.mobile-background').css('display',"none");
         })
-
     );
 
 
@@ -148,17 +150,6 @@ jQuery(function ($) {
         }
 
     });
-
-    $(document).ready (
-
-        $('.toggle-menu').click(function (){
-
-            $('.mobile-background').css('display',"block");
-            $('.mobile-background').css('z-index',"999");
-
-            }
-        )
-    );
 
     $(document).ready (
 

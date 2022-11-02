@@ -624,6 +624,7 @@ body{
     top: 0;
     right: -280px;
     z-index: 999;
+    transition: 0.8s;
 }
 
 .mobile-search-icon {
@@ -906,6 +907,7 @@ body{
         content: "";
         position: absolute;
         display: none;
+        transition: 0.8s;
 
     }
 
