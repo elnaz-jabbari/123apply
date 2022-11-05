@@ -940,7 +940,6 @@ body{
     .menu-item-has-children ::before {
         content: url(http://localhost/apply/wp-content/uploads/2022/10/3017941_arrow_declining_descending_down_downhill_icon-1.png);
         display: inline-block;
-        font-family: bootstrap-icons !important;
         font-style: normal;
         font-weight: 400 !important;
         font-variant: normal;
